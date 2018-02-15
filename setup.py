@@ -1,6 +1,6 @@
 """Installer for python-tx-tftp."""
 
-from setuptools import setup
+from setuptools import setup, find_packages
 
 
 setup(
@@ -16,9 +16,9 @@ setup(
         'Programming Language :: Python',
         'Topic :: Software Development :: Libraries',
     ],
-    packages={'tftp'},
-    install_requires={"Twisted"},
+    packages=find_packages(),
+    install_requires=["Twisted"],
     description="A Twisted-based TFTP implementation.",
-    setup_requires={"setuptools_trial"},
+    setup_requires=["setuptools_trial"],
     test_suite="tftp",
 )
